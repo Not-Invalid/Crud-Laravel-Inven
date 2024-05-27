@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware('role:Admin')->group(function () {
         Route::controller(InventarisController::class)->prefix('inventaris')->group(function () {
             Route::get('', 'index')->name('inventaris.index');
+            Route::get('cetak', 'cetak')->name('inventaris.cetak');
         });
 
         Route::controller(BarangController::class)->prefix('barang')->group(function () {
