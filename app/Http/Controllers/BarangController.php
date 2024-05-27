@@ -96,7 +96,7 @@ class BarangController extends Controller
 
     public function cetak() {
         $data = Barang::orderBy('kode_barang', 'DESC')->get();
-        $pdf = Pdf::loadView('barang.cetak', ['data' => $data])->setPaper('a4', 'landscape');
+        $pdf = Pdf::loadView('barang.cetak', ['data' => $data])->setPaper('a4', 'potrait');
         return $pdf->stream('laporan_barang.pdf');
     }
 }
