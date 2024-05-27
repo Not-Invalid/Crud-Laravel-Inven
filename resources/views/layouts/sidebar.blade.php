@@ -11,7 +11,7 @@
     <div class="text-dark" style="font-size: 24px">
         <li class="nav-item">
             <a class="nav-link" href="{{ route('dashboard') }}">
-                <i class="fas fa-fw fa-warehouse" style="font-size: 24px;"></i>
+                <i class="fas fa-fw fa-grip" style="font-size: 24px;"></i>
                 <span>Dashboard</span>
             </a>
         </li>
@@ -19,7 +19,7 @@
         @if(Auth::user()->role === 'Admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('inventaris.index') }}">
-                <i class="fas fa-fw fa-warehouse" style="font-size: 24px;"></i>
+                <i class="fas fa-fw fa-table" style="font-size: 24px;"></i>
                 <span>Data Inventaris</span>
             </a>
         </li>
