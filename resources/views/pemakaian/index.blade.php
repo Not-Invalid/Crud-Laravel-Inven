@@ -6,7 +6,7 @@
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Daftar Pemakaian</h1>
         <div>
-            <a href="{{ route('pemakaian.tambah') }}" class="btn btn-success me-2"><i class="fas fa-plus" style="margin-right: 8px"></i>Tambah Barang</a>
+            <a href="{{ route('pemakaian.tambah') }}" class="btn btn-success me-2"><i class="fas fa-plus" style="margin-right: 8px"></i>Tambah Pemakaian</a>
             @if(auth()->user() && auth()->user()->role === 'Admin')
                 <a href="{{ route('pemakaian.cetak') }}" class="btn btn-success"><i class="fas fa-download" style="margin-right: 8px"></i>Download Laporan</a>
             @endif
