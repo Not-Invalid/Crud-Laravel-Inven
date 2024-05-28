@@ -15,7 +15,7 @@
                 @csrf
                 <div class="row">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="email" placeholder="Email or Phone" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="row">
                     <i class="fas fa-lock"></i>
