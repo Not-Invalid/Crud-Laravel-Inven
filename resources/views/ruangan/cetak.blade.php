@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laporan Barang</title>
+    <title>Laporan Ruangan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
