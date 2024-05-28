@@ -4,7 +4,7 @@
   
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
-        <h1 class="mb-0"> Barang</h1>
+        <h1 class="mb-0">Daftar Barang</h1>
         <div>
             <a href="{{ route('barang.tambah') }}" class="btn btn-success me-2"><i class="fas fa-plus" style="margin-right: 8px"></i>Tambah Barang</a>
             @if(auth()->user() && auth()->user()->role === 'Admin')
