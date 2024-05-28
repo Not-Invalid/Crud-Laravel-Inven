@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ruangan;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class RuanganController extends Controller
 {
@@ -49,5 +50,11 @@ class RuanganController extends Controller
         $ruangan->delete();
 
         return redirect()->route('ruangan.index')->with('success', 'Data Ruangan Berhasil Dihapus');
+    }
+
+    public function cetak() {
+        $data = Ruangan::orderBy('id_ruangan', 'DESC')->get();
+        $pdf = Pdf::loadView('ruangan.cetak', ['data' => $data])->setPaper('a4', 'landscape');
+        return $pdf->stream('laporan_ruangan.pdf');
     }
 }
