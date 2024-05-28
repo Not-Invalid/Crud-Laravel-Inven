@@ -59,6 +59,7 @@ Route::middleware('auth')->group(function () {
             Route::get('ubah/{id}', 'ubah')->name('ruangan.ubah');
             Route::put('ubah/{id}', 'update')->name('ruangan.update');
             Route::delete('hapus/{id}', 'hapus')->name('ruangan.hapus');
+            Route::get('cetak', 'cetak')->name('ruangan.cetak');
         });
 
         Route::controller(JenisBarangController::class)->prefix('jenis_barang')->group(function () {
@@ -68,6 +69,7 @@ Route::middleware('auth')->group(function () {
             Route::get('ubah/{id}', 'ubah')->name('jenis_barang.ubah');
             Route::put('ubah/{id}', 'update')->name('jenis_barang.update');
             Route::delete('hapus/{id}', 'hapus')->name('jenis_barang.hapus');
+            Route::get('cetak', 'cetak')->name('jenis_barang.cetak');
         });
     });
 
