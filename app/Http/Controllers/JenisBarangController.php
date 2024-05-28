@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\JenisBarang;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class JenisBarangController extends Controller
 {
@@ -49,5 +50,11 @@ class JenisBarangController extends Controller
         $jenis_barang->delete();
 
         return redirect()->route('jenis_barang.index')->with('success', 'Data Berhasil Dihapus');
+    }
+
+    public function cetak() {
+        $data = JenisBarang::orderBy('id_jenis_barang', 'DESC')->get();
+        $pdf = Pdf::loadView('jenis_barang.cetak', ['data' => $data])->setPaper('a4', 'potrait');
+        return $pdf->stream('laporan_jenisbarang.pdf');
     }
 }
